@@ -4,14 +4,7 @@
 \*----------------------------------------------*/
 /**
 * GENERAL
-* HEADER_PAGE
-* BODY_CONTENT
-* FOOTER
-* MENU
-* CONTENT_BODY
-* LOGIN
-* MY_BEACONS
-* MY_BEACONS_DETAIL
+* 
 */
 
 /*----------------------------------------------*\
@@ -25,3 +18,45 @@ html {font-size: 14px;
     /*display: inline-table;}*/
 body {margin-bottom: 60px;
     display: flex;}
+.main-container {width: 100%;}
+
+h1 {margin: 0px !important;}
+h1 a img {height: 100%;
+    display: inline !important;
+    margin-right: 5px;}
+h1 a {padding: 5px 15px !important;
+    color: #fff !important;
+}
+
+header nav {/*background: rgba(119, 16, 16, 0.6) !important;*/
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.menu-header ul li:focus,
+.menu-header ul li:hover {border: 1px solid #fff;
+    background: rgba(119, 16, 16, 0.6) !important;
+    color: #fff !important;
+}
+.menu-header ul li a {color: #fff !important;}
+
+.content-body-home {background-image: url(../img/home.jpg),linear-gradient(to left,#7b4397,#dc2430);
+    background-size:cover;
+    border: 2px solid #000;
+    height: 100%;
+}
+.oscurecedor {background: rgba(0,0,0,0.6);
+    z-index: 300;
+    width: 100%;
+    height: 100%;
+}
+
+.content {height: 100%;
+    position: absolute;
+    width: 100%;}
+.escudo-home {position: absolute;
+    top: 130px;
+    left: 7%;}
+.title-home {font-size: 1.5em;
+    position: absolute;
+}

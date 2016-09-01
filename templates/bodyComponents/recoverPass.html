@@ -1,0 +1,63 @@
+        <div class="body-content">
+          <div class="row nopadding">
+            <div class="col-xs-12 col-xs-offset-0 col-md-6 col-md-offset-3 row">
+              <!-- Restore Pass -->
+              <form class="login-form col-xs-12 col-md-6 col-md-offset-3" name="resform" role="form" ng-show="!registerDisplay">
+                <fieldset>
+                  <legend>Recover password</legend>
+                  <div class="update-profile-msg">
+                    <!--<p class="bg-danger" role="alert" ng-show="errorTokenNoExist">The url is not valid or is expired.</p>-->
+                    <p class="bg-danger" role="alert" ng-show="errorSystem">The password is not restored, try it later.</p>
+                    <!--<p class="bg-warning" role="alert" ng-show="warning">Your profile is updated saccessfully, you are going back to home page...</p>-->
+                  </div>
+                  <p class="pass-reset-content" ng-show="!passRestored && !errorTokenNoExist">Fill in a new password and confirm it.</p>
+                  <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1" ng-show="!passRestored && !errorTokenNoExist">
+
+                    <div class="form-group has-feedback">
+                      <label for="password">Password</label>
+                      <input type="password" name="uPass" class="form-control" id="uPass" tabindex="2" ng-minlength="8"
+                             placeholder="Type your password here_" ng-model="restore.password" required>
+
+                      <div ng-show="resform.$submitted || resform.uPass.$touched">
+                        <span class="glyphicon glyphicon-remove error-login-register form-control-feedback red" aria-hidden="true" ng-show="resform.uPass.$error.required || resform.uPass.$error.minlength"></span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="resform.uPass.$error.required">Fill in the password.</span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="resform.uPass.$error.minlength">The password minimum length is 8 characters.</span>
+                      </div>                      
+                    </div>
+
+                    <div class="form-group has-feedback">
+                      <label for="cpassword">Confirm your password</label>
+                      <input type="password" name="ucPass" class="form-control" id="cpassword" tabindex="3" ng-minlength="8" compare-to="uPass"
+                             placeholder="Confirm your password here_" ng-model="restore.cpassword" required>
+
+                      <div ng-show="resform.$submitted || resform.ucPass.$touched">
+                        <span class="glyphicon glyphicon-remove error-login-register form-control-feedback red" aria-hidden="true" ng-show="resform.ucPass.$error.required || resform.ucPass.$error.minlength || resform.ucPass.$error.compareTo"></span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="resform.ucPass.$error.required">Fill in the password confirmation.</span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="resform.ucPass.$error.minlength">The password confirmation minimum length is 8 characters.</span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="resform.ucPass.$error.compareTo">Passwords don't match.</span>
+                      </div>                       
+                    </div> 
+
+                    <button class="btn btn-primary col-xs-12 col-sm-12" tabindex="4" ng-click="restorePass()">Restore the password</button>
+                    <div class="pass-reset-login col-xs-12 col-sm-12">
+                      <a href="/#index" tabindex="5">Go back to login form</a>
+                    </div>
+                  </div>
+                  <div ng-show="passRestored">
+                    <p class="pass-reset-content">Password restored successfully. Go to login page to access to the cms.</p>
+                    <div class="pass-reset-login col-xs-12 col-sm-12">
+                      <a href="/#index" tabindex="4" ng-click="goBackLogin()">Go to login form</a>
+                    </div>
+                  </div>
+                  <div ng-show="errorTokenNoExist">
+                    <p class="pass-reset-content">The url is not valid or is expired.</p>
+                    <div class="pass-reset-login col-xs-12 col-sm-12">
+                      <a href="/#index" tabindex="4" ng-click="goBackLogin()">Go to login form</a>
+                    </div>
+                  </div> 
+                </fieldset>
+              </form>
+              <!-- FIN LOGIN -->              
+            </div>
+          </div>
+        </div>

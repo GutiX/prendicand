@@ -1,0 +1,27 @@
+
+/*----------------------------------------------*\
+		$ILUBEACON_CMS
+\*----------------------------------------------*/
+/**
+* GENERAL
+* HEADER_PAGE
+* BODY_CONTENT
+* FOOTER
+* MENU
+* CONTENT_BODY
+* LOGIN
+* MY_BEACONS
+* MY_BEACONS_DETAIL
+*/
+
+/*----------------------------------------------*\
+		$GENERAL
+\*----------------------------------------------*/
+
+html {font-size: 14px;
+	position: relative;
+    min-height: 100%;}
+/*body {margin-bottom: 25px;
+    /*display: inline-table;}*/
+body {margin-bottom: 60px;
+    display: flex;}

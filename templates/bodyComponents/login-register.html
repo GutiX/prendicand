@@ -1,0 +1,120 @@
+        <div class="body-content">
+          <div class="row nopadding">
+            <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 row log-reg-frame">
+              <!-- LOGIN -->
+              <form class="login-form col-xs-12 col-md-6 col-md-offset-3" name="aCtrl.lform" role="form" ng-show="!registerDisplay">
+                <fieldset>
+                  <legend>Sign in</legend>
+                  <div class="update-profile-msg">
+                    <p class="bg-danger" role="alert" ng-show="error">The email or password is not correct.</p>
+                  </div>
+                  <div class="error-msg" ng-show='sessionError'><p>Session is expired or not exist.</p></div>
+                  <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1">
+                    <div class="form-group has-feedback">
+                      <label for="email">Email</label>
+                      <input type="email" name="uEmail" class="form-control" id="email" tabindex="1" ng-class="{ 'inputError' : aCtrl.lform.uEmail.$invalid && aCtrl.lform.$submitted}" placeholder="Type here_" ng-model="login.email" required="">
+
+                      <div ng-show="aCtrl.lform.$submitted && (aCtrl.lform.$submitted || aCtrl.lform.uEmail.$touched)">
+                        <span class="glyphicon glyphicon-remove error-login-register form-control-feedback red" aria-hidden="true" ng-show="aCtrl.lform.uEmail.$error.required || aCtrl.lform.uEmail.$error.email"></span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="aCtrl.lform.uEmail.$error.required">Fill in your email.</span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="aCtrl.lform.uEmail.$error.email">The email format is not correct.</span>
+                      </div>
+                      
+                    </div>
+                    <div class="form-group has-feedback">
+                      <label for="password">Password</label>
+                      <input type="password" name="uPass" class="form-control" id="password" tabindex="2" ng-class="{ 'inputError' : aCtrl.lform.uPass.$invalid && aCtrl.lform.$submitted}" placeholder="Type here_" ng-model="login.password" ng-minlength="8" required>
+
+                      <div ng-show="aCtrl.lform.$submitted && (aCtrl.lform.$submitted || aCtrl.lform.uPass.$touched)">
+                        <span class="glyphicon glyphicon-remove error-login-register form-control-feedback red" aria-hidden="true" ng-show="aCtrl.lform.uPass.$error.required || aCtrl.lform.uPass.$error.minlength"></span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="aCtrl.lform.uPass.$error.required">Fill in the password.</span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="aCtrl.lform.uPass.$error.minlength">The password minimum length is 8 characters.</span>
+                      </div>
+                      
+                    </div>
+                    <div class="forgot-password-link"><a href="#restorePass" tabindex="4">Forgot your password?</a></div>
+                    <button class="btn btn-primary col-xs-12 col-sm-12" tabindex="3" ng-click="login(login.email, login.password)">Login</button>
+                  </div>
+                </fieldset>
+
+                <div>
+                  <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 login-new-account-text">
+                    <span>New to iluBeacon?</span>
+                  </div>
+                  <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 login-new-account-button">
+                    <button class="btn btn-default col-xs-12 col-sm-12" tabindex="5" ng-click="showRegister()">Create your account</button>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 text-login-register">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+              </form>
+              <!-- FIN LOGIN -->
+              <!-- REGISTER -->
+              <form name="aCtrl.rform" class="login-form col-xs-12 col-md-6 col-md-offset-3" role="form" ng-show="registerDisplay">
+                <fieldset>
+                  <legend>Create your account</legend>
+                  <div class="update-profile-msg">
+                    <p class="bg-danger" ng-show="error_register_email">This email is already registered.</p>
+                  </div>
+                  <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1">
+                    <div class="form-group has-feedback">
+                      <label for="username">Name or Company name</label>
+                      <input type="text" name="uName" class="form-control" id="username" tabindex="6" ng-class="{ 'inputError' : aCtrl.rform.uName.$invalid && aCtrl.rform.$submitted}" ng-minlength="3" placeholder="Type your name here_" ng-model="register.username" required/>
+
+                      <div ng-show="aCtrl.rform.$submitted && (aCtrl.rform.$submitted || aCtrl.rform.uName.$touched)">
+                        <span class="glyphicon glyphicon-remove error-login-register form-control-feedback red" aria-hidden="true" ng-show="aCtrl.rform.uName.$error.required || aCtrl.rform.uName.$error.minlength"></span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="aCtrl.rform.uName.$error.required">Fill in the name.</span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="aCtrl.rform.uName.$error.minlength">The name minimum length is 3 characters.</span>
+                      </div>
+                      
+                    </div>
+                    <div class="form-group has-feedback">
+                      <label for="email">Email</label>
+                      <input type="email" name="uEmail" class="form-control" id="email" tabindex="7" ng-class="{ 'inputError' : aCtrl.rform.uEmail.$invalid && aCtrl.rform.$submitted}" placeholder="Type your email here_" ng-model="register.email" required>
+
+                      <div ng-show="aCtrl.rform.$submitted && (aCtrl.rform.$submitted || aCtrl.rform.uEmail.$touched)"">
+                        <span class="glyphicon glyphicon-remove error-login-register form-control-feedback red" aria-hidden="true" ng-show="aCtrl.rform.uEmail.$error.required || aCtrl.rform.uEmail.$error.email"></span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="aCtrl.rform.uEmail.$error.required">Fill in your email.</span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="aCtrl.rform.uEmail.$error.email">The email format is not correct.</span>
+                      </div>
+
+                    </div>
+                    <div class="form-group has-feedback">
+                      <label for="password">Password</label>
+                      <input type="password" name="uPass" class="form-control" id="uPass" tabindex="8" ng-class="{ 'inputError' : aCtrl.rform.uPass.$invalid && aCtrl.rform.$submitted}" ng-minlength="8" placeholder="Type your password here_" ng-model="register.password" required>
+
+                      <div ng-show="aCtrl.rform.$submitted && (aCtrl.rform.$submitted || aCtrl.rform.uPass.$touched)"">
+                        <span class="glyphicon glyphicon-remove error-login-register form-control-feedback red" aria-hidden="true" ng-show="aCtrl.rform.uPass.$error.required || aCtrl.rform.uPass.$error.minlength"></span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="aCtrl.rform.uPass.$error.required">Fill in the password.</span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="aCtrl.rform.uPass.$error.minlength">The password minimum length is 8 characters.</span>
+                      </div>
+                      
+                    </div>
+                    <div class="form-group has-feedback">
+                      <label for="cpassword">Confirm your password</label>
+                      <input type="password" name="ucPass" class="form-control" id="cpassword" tabindex="9" ng-class="{ 'inputError' : aCtrl.rform.ucPass.$invalid && aCtrl.rform.$submitted}" ng-minlength="8" compare-to="uPass" placeholder="Confirm your password here_" ng-model="register.cpassword" required>
+
+                      <div ng-show="aCtrl.rform.$submitted && (aCtrl.rform.$submitted || aCtrl.rform.ucPass.$touched)"">
+                        <span class="glyphicon glyphicon-remove error-login-register form-control-feedback red" aria-hidden="true" ng-show="aCtrl.rform.ucPass.$error.required || aCtrl.rform.ucPass.$error.minlength || aCtrl.rform.ucPass.$error.compareTo"></span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="aCtrl.rform.ucPass.$error.required">Fill in the password confirmation.</span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="aCtrl.rform.ucPass.$error.minlength">The password confirmation minimum length is 8 characters.</span>
+                        <span id="inputError2Status" class="error-label" role="alert" ng-show="aCtrl.rform.ucPass.$error.compareTo">Passwords don't match.</span>
+                      </div>
+                       
+                    </div>
+
+                    <button class="btn btn-primary col-xs-12 col-sm-12" tabindex="10" ng-click="register(register)">Create your iluBeacon account</button>
+                  </div>
+                  <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 text-login-register">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                  <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 forgot-password-link">
+                    <a href="" tabindex="11" ng-click="showRegister()">Already have an account?</a>
+                  </div>
+                </fieldset>
+              </form>
+              <!-- FIN REGISTER -->
+            </div>
+          </div>
+        </div>

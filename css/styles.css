@@ -58,6 +58,26 @@ header nav {/*background: rgba(119, 16, 16, 0.6) !important;*/
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+
+.content-body-carta {background-image: url(../img/carta2.jpg),linear-gradient(to left,#7b4397,#dc2430);
+    background-size:cover;
+    height: 100%;
+    
+    filter: url('#grayscale'); /* Versión SVG para IE10, Chrome 17, FF3.5, Safari 5.2 and Opera 11.6 */
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%); /* Para cuando es estándar funcione en todos */
+    filter: Gray(); /* IE4-8 and 9 */
+    
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
 .oscurecedor {background: rgba(0,0,0,0.6);
     z-index: 300;
     width: 100%;
@@ -106,3 +126,8 @@ header nav {/*background: rgba(119, 16, 16, 0.6) !important;*/
     width: 100%;
     margin-top: 8%;
     z-index: 9999;}
+    
+.content-text {background: rgba(255,255,255,0.6);
+    border-radius: 4px;
+    padding: 0 30px;
+}

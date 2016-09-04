@@ -12,6 +12,11 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'templates/bodyComponents/bhome.html'
         })
         
+        .state('carta', {
+            url: '/carta',
+            templateUrl: 'templates/bodyComponents/carta.html'
+        })
+
         .state('myBeacons', {
             url: '/myBeacons',
             templateUrl: 'templates/bodyComponents/myBeacons.html'
@@ -35,11 +40,6 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('places', {
             url: '/places',
             templateUrl: 'templates/bodyComponents/places.html'
-        })
-
-        .state('getStart', {
-            url: '/getStart',
-            templateUrl: 'templates/bodyComponents/getStart.html'
         })
 
 });

@@ -9,12 +9,26 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
             url: '/home',
-            templateUrl: 'templates/bodyComponents/bhome.html'
+            views: {
+                'body': {
+                    templateUrl: 'templates/bodyComponents/bhome.html'
+                },
+                'header': {
+                    templateUrl: 'templates/commonComponents/headerIndex.html'
+                }
+            }
         })
         
         .state('carta', {
             url: '/carta',
-            templateUrl: 'templates/bodyComponents/carta.html'
+            views: {
+                'body': {
+                    templateUrl: 'templates/bodyComponents/carta.html'
+                },
+                'header': {
+                    templateUrl: 'templates/commonComponents/header.html'
+                }
+            }
         })
 
         .state('myBeacons', {

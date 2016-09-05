@@ -22,14 +22,14 @@
     <div class="main-container">
 
       <!-- HEADER -->
-      <header class="main-header" ng-include="'templates/commonComponents/header.html'"></header>
+      <header class="main-header" ui-view="header"></header>
       
       <!-- FIN HEADER -->
 
       <!-- HOME CONTENT -->
       <div class="main-content">
         
-        <div class="content" ui-view>
+        <div class="content" ui-view="body">
 
         </div>
 

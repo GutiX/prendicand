@@ -64,7 +64,7 @@ header nav {/*background: rgba(119, 16, 16, 0.6) !important;*/
     
 }
 
-.content-body-carta {background-image: url(../img/carta2.jpg),linear-gradient(to left,#7b4397,#dc2430);
+.content-body-carta {background-image: url(../img/carta.jpg),linear-gradient(to left,#7b4397,#dc2430);
     background-size:cover;
     height: 100%;
     display: flex;
@@ -72,6 +72,14 @@ header nav {/*background: rgba(119, 16, 16, 0.6) !important;*/
 }
 
 .content-body-candidatos {background-image: url(../img/cand1.jpg),linear-gradient(to left,#7b4397,#dc2430);
+    background-size:cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+}
+
+.content-body-programa {background-image: url(../img/programa.jpg),linear-gradient(to left,#7b4397,#dc2430);
     background-size:cover;
     height: 100%;
     width: 100%;
@@ -87,7 +95,8 @@ header nav {/*background: rgba(119, 16, 16, 0.6) !important;*/
 }
 
 .content-body-carta .oscurecedor,
-.content-body-candidatos .oscurecedor {background: rgba(0,0,0,0.6);
+.content-body-candidatos .oscurecedor,
+.content-body-programa .oscurecedor {background: rgba(0,0,0,0.6);
     z-index: 300;
     width: 100%;
     height: 100%;
@@ -124,7 +133,7 @@ header nav {/*background: rgba(119, 16, 16, 0.6) !important;*/
 .title-home .text {text-align: right;
     display: inline-block;
 }
-.title-home .text .nombre {width: 100%;
+.title-home .text .hnombre {width: 100%;
     display: block;
     font-size: 3.6rem;
     font-style: italic;
@@ -142,9 +151,9 @@ header nav {/*background: rgba(119, 16, 16, 0.6) !important;*/
     margin-top: 8%;
     z-index: 9999;}
     
-.content-text {background: rgba(255,255,255,0.6);
+.content-text {background: rgba(255,255,255,0.7);
     border-radius: 4px;
-    padding: 0 30px;
+    padding: 10px 30px 20px;
     margin-bottom: 30px;
     margin-top: 120px;
 }
@@ -163,12 +172,24 @@ footer {margin-top: 10px;
 .right {text-align: right;}
 
 .candidatos-content {display: inline-block;
-    margin: 230px 3% 0px 3%;
+    margin: 120px 3% 0px 3%;
 }
 .candidatos-content div img {width: 100%;}
 
-.candidatos-desc {background-color: #fff;
+.candidatos-desc {background: rgba(255,255,255,0.6);
+    font-family: "Georgia, serif";
     margin-top: 10px;
     padding: 8px;
     border-radius: 5px;
-    text-align: center;}
+    text-align: center;
+    height: 266px;
+}
+.nombre {font-size: 1.4em;
+    color: #A2003A;
+    font-weight: bold;}
+.candidatoa {color: #A2003A;
+    font-weight: bold;}
+    
+.candidatos-desc span {
+    font-weight: bold;
+}

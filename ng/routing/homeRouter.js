@@ -55,4 +55,16 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             }
         })
 
+        .state('historia', {
+            url: '/historia',
+            views: {
+                'body': {
+                    templateUrl: 'templates/bodyComponents/historia.html'
+                },
+                'header': {
+                    templateUrl: 'templates/commonComponents/header.html'
+                }
+            }
+        })
+
 });

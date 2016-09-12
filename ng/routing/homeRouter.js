@@ -31,29 +31,28 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             }
         })
 
-        .state('myBeacons', {
-            url: '/myBeacons',
-            templateUrl: 'templates/bodyComponents/myBeacons.html'
-        })
-        
-        .state('myBeaconTechnicalSettings', {
-            url: '/myBeaconTechnicalSettings',
-            templateUrl: 'templates/bodyComponents/myBeaconTechnicalSettings.html'
-        })
-
-        .state('myBeaconContent', {
-            url: '/myBeaconContent',
-            templateUrl: 'templates/bodyComponents/myBeaconContent.html'
+        .state('programa', {
+            url: '/programa',
+            views: {
+                'body': {
+                    templateUrl: 'templates/bodyComponents/programa.html'
+                },
+                'header': {
+                    templateUrl: 'templates/commonComponents/header.html'
+                }
+            }
         })
 
-        .state('userProfile', {
-            url: '/userProfile',
-            templateUrl: 'templates/bodyComponents/userProfileInfo.html'
-        })
-
-        .state('places', {
-            url: '/places',
-            templateUrl: 'templates/bodyComponents/places.html'
+        .state('candidatos', {
+            url: '/candidatos',
+            views: {
+                'body': {
+                    templateUrl: 'templates/bodyComponents/candidatos.html'
+                },
+                'header': {
+                    templateUrl: 'templates/commonComponents/header.html'
+                }
+            }
         })
 
 });

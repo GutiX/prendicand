@@ -140,6 +140,18 @@ nav div div button.navbar-toggle:hover {background: rgba(255,255,255,1);}
     margin-right: 11%;*/
 }
 
+
+.escudo-home-pre {/*position: absolute;
+    top: 130px;
+    left: 7%;*/
+    text-align: center;
+    z-index: 999;
+}
+.escudo-home-pre img {width: 30%;
+    /*margin-left: 15%;
+    margin-right: 11%;*/
+}
+
 @media(min-width: 800px) {
     .title-home {font-size: 2.5em;
         color: #fff;
@@ -204,12 +216,18 @@ nav div div button.navbar-toggle:hover {background: rgba(255,255,255,1);}
         z-index: 999;
     }
     
+    .escudo-home-pre {margin-top: 90px;
+        text-align: center;
+        z-index: 999;
+    }
+    
     .title-home {font-size: 2em;
         color: #fff;
         font-family: "Georgia, serif";
         padding-top: 30px;
         text-align: center;
         z-index: 999;
+        margin-bottom: 10px;
     }
     
     .title-home .text {text-align: right;}
@@ -260,6 +278,16 @@ nav div div button.navbar-toggle:hover {background: rgba(255,255,255,1);}
     margin-top: 8%;
     z-index: 999;}
     
+.content-home-pre {/*position: absolute;*/
+    width: 100%;
+    margin-top: 5.5%;
+    z-index: 999;
+}
+    
+.title-home img {width: 100%;
+    border: 2px solid #fff;
+    border-radius: 15px;}
+    
 footer {margin-top: 10px;
 	width: 100%;
 	position: absolute;
@@ -284,4 +312,4 @@ footer {margin-top: 10px;
     
 .candidatos-desc span {
     font-weight: bold;
-}
+}	

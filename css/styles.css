@@ -40,7 +40,14 @@ header nav {/*background: rgba(119, 16, 16, 0.6) !important;*/
     background-color: transparent !important;
     border: none !important;
     position: absolute !important;
+    z-index: 9999;
 }
+
+nav div div button.navbar-toggle {color: #000;
+    background: rgba(255,255,255,0.7);
+}
+
+nav div div button.navbar-toggle:hover {background: rgba(255,255,255,1);}
 
 .menu-header ul li:focus,
 .menu-header ul li:hover {border: 1px solid #fff;
@@ -100,6 +107,7 @@ header nav {/*background: rgba(119, 16, 16, 0.6) !important;*/
     width: 100%;
     height: 100%;
     position: absolute;
+    padding: 5px;
 }
 
 .content-body-carta .oscurecedor,
@@ -111,6 +119,7 @@ header nav {/*background: rgba(119, 16, 16, 0.6) !important;*/
     height: 100%;
     display: inline-block;
     overflow-x: auto;
+    padding: 5px;
     /*position: absolute;*/
 }
 
@@ -124,49 +133,133 @@ header nav {/*background: rgba(119, 16, 16, 0.6) !important;*/
     top: 130px;
     left: 7%;*/
     text-align: center;
-    z-index: 9999;
+    z-index: 999;
 }
 .escudo-home img {width: 30%;
     /*margin-left: 15%;
     margin-right: 11%;*/
 }
-.title-home {font-size: 2.5em;
-    color: #fff;
-    font-family: "Georgia, serif";
-    padding-top: 30px;
-    text-align: center;
-    z-index: 9999;
-    /*padding-left: 5%;
-    padding-right: 0px;*/
+
+@media(min-width: 800px) {
+    .title-home {font-size: 2.5em;
+        color: #fff;
+        font-family: "Georgia, serif";
+        padding-top: 30px;
+        text-align: center;
+        z-index: 999;
+        /*padding-left: 5%;
+        padding-right: 0px;*/
+    }
+    
+    .title-home .text {text-align: right;
+        display: inline-block;
+    }
+    
+    .title-home .text .candidatura {text-align: left;
+        padding-right: 260px;
+    }
+    
+    .title-home .text .hermandad {width: 440px;
+        display: inline-block;
+        text-align: right;
+        margin: 0px;}
+        
+    
+    .content-text {background: rgba(255,255,255,0.7);
+        border-radius: 4px;
+        padding: 10px 30px 20px;
+        margin-bottom: 30px;
+        margin-top: 120px;
+    }
+
+    .candidatos-desc {background: rgba(255,255,255,0.6);
+        font-family: "Georgia, serif";
+        margin-top: 10px;
+        padding: 8px;
+        border-radius: 5px;
+        text-align: center;
+        min-height: 266px;
+        margin-bottom: 15px;
+    }
+    
+    .candidatos-content {display: inline-block;
+        margin: 120px 3% 0px 3%;
+    }
 }
-.title-home .text {text-align: right;
-    display: inline-block;
+
+@media(max-width: 800px) { 
+    
+    .content-body-home {background-image: url(../img/home2.jpg),linear-gradient(to left,#7b4397,#dc2430);
+        background-size:cover;
+        height: 100%;
+        
+        position: absolute;
+        top: 0;
+        width: 100%;
+        
+    }
+
+    .escudo-home {margin-top: 50px;
+        text-align: center;
+        z-index: 999;
+    }
+    
+    .title-home {font-size: 2em;
+        color: #fff;
+        font-family: "Georgia, serif";
+        padding-top: 30px;
+        text-align: center;
+        z-index: 999;
+    }
+    
+    .title-home .text {text-align: right;}
+    
+    .title-home .text .candidatura {text-align: left;}
+    
+    .title-home .text .hermandad {display: inline-block;
+        text-align: right;
+        margin: 0px;}
+        
+    div.menu-header {padding: 0 15px !important;
+        background: rgba(0,0,0,0.8);
+        border-radius: 5px}
+    div.navbar-header {background: rgba(0,0,0,0.8);}
+        
+    .content-text {background: rgba(255,255,255,0.7);
+        border-radius: 4px;
+        padding: 10px 30px 20px;
+        margin-bottom: 30px;
+        margin-top: 70px;
+    }
+    
+    .cand-image {height: 370px;
+        overflow: hidden;}
+        
+    .candidatos-desc {
+        background: rgba(255,255,255,0.6);
+        font-family: "Georgia, serif";
+        padding: 8px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .candidatos-content {display: inline-block;
+        margin: 70px 3% 0px 3%;
+    }
 }
+
 .title-home .text .hnombre {width: 100%;
     display: block;
     font-size: 3.6rem;
     font-style: italic;
 }
-.title-home .text .candidatura {text-align: left;
-    padding-right: 260px;
-}
-.title-home .text .hermandad {width: 440px;
-    display: inline-block;
-    text-align: right;
-    margin: 0px;}
+
 
 .content-home {/*position: absolute;*/
     width: 100%;
     margin-top: 8%;
-    z-index: 9999;}
+    z-index: 999;}
     
-.content-text {background: rgba(255,255,255,0.7);
-    border-radius: 4px;
-    padding: 10px 30px 20px;
-    margin-bottom: 30px;
-    margin-top: 120px;
-}
-
 footer {margin-top: 10px;
 	width: 100%;
 	position: absolute;
@@ -180,20 +273,9 @@ footer {margin-top: 10px;
 
 .right {text-align: right;}
 
-.candidatos-content {display: inline-block;
-    margin: 120px 3% 0px 3%;
-}
+
 .candidatos-content div img {width: 100%;}
 
-.candidatos-desc {background: rgba(255,255,255,0.6);
-    font-family: "Georgia, serif";
-    margin-top: 10px;
-    padding: 8px;
-    border-radius: 5px;
-    text-align: center;
-    height: 266px;
-    margin-bottom: 15px;
-}
 .nombre {font-size: 1.4em;
     color: #A2003A;
     font-weight: bold;}

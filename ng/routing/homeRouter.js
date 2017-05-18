@@ -67,4 +67,40 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             }
         })
 
+        .state('videos', {
+            url: '/videos',
+            views: {
+                'body': {
+                    templateUrl: 'templates/bodyComponents/videos.html'
+                },
+                'header': {
+                    templateUrl: 'templates/commonComponents/header.html'
+                }
+            }
+        })
+
+        .state('adhesiones', {
+            url: '/adhesiones',
+            views: {
+                'body': {
+                    templateUrl: 'templates/bodyComponents/adhesiones.html'
+                },
+                'header': {
+                    templateUrl: 'templates/commonComponents/header.html'
+                }
+            }
+        })
+
+        .state('test', {
+            url: '/test',
+            views: {
+                'body': {
+                    templateUrl: 'templates/bodyComponents/test.php'
+                },
+                'header': {
+                    templateUrl: 'templates/commonComponents/header.html'
+                }
+            }
+        })
+
 });
